@@ -1,0 +1,449 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .airline-photo {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .airline-photo img {
+            width: 50%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .airline-photo .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #confirmation {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact-page {
+            text-align: center;
+        }
+
+        .contact-page h2 {
+            color: #333;
+        }
+
+        .contact-page form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="javascript:void(0)" onclick="showContactPage()">Contact</a>
+    </div>
+
+    <div class="container" id="homePage">
+        <h1>Welcome to Our Airline</h1>
+        <div class="airline-photo">
+            <img src="https://imgproc.airliners.net/photos/airliners/1/0/9/0466901.jpg?v=v40" alt="Airline">
+            <div class="text-overlay">Fly With Us</div>
+        </div>
+        <h2>Book Your Flight</h2>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="destination">Destination:</label>
+            <select id="destination" required>
+                <option value="">Select Destination</option>
+                <option value="New York">New York</option>
+                <option value="London">London</option>
+                <option value="Tokyo">Tokyo</option>
+            </select>
+
+            <label for="date">Travel Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="seat">Seat Preference:</label>
+            <select id="seat" required>
+                <option value="">Select Seat</option>
+                <option value="Window">Window</option>
+                <option value="Aisle">Aisle</option>
+                <option value="Middle">Middle</option>
+            </select>
+
+            <button type="submit">Book Now</button>
+        </form>
+        <div id="confirmation" class="hidden">
+            <h2>Booking Confirmation</h2>
+            <p id="confirmationMessage"></p>
+        </div>
+    </div>
+
+    <div class="container hidden" id="contactPage">
+        <div class="contact-page">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="contactName">Name:</label>
+                <input type="text" id="contactName" required>
+
+                <label for="contactEmail">Email:</label>
+                <input type="email" id="contactEmail" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const destination = document.getElementById('destination').value;
+            const date = document.getElementById('date').value;
+            const seat = document.getElementById('seat').value;
+
+            const message = `Thank you, ${name}! Your booking to ${destination} on ${date} with a ${seat} seat has been confirmed. A confirmation email has been sent to ${email}.`;
+
+            document.getElementById('confirmationMessage').innerText = message;
+            document.getElementById('confirmation').classList.remove('hidden');
+        });
+
+        function showContactPage() {
+            document.getElementById('homePage').classList.add('hidden');
+            document.getElementById('contactPage').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            margin: 0;
+        }
+
+        .hero img {
+            width: 70%; /* Medium-sized photo */
+            height: auto;
+            max-width: 1000px; /* Adjust maximum width if needed */
+            margin: auto;
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        #contactInfo {
+            display: none;
+            padding: 10px;
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        #toggleButton {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #toggleButton:hover {
+            background-color: #555;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input, form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#payment">Payment</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <img src="https://wallpapercave.com/wp/wp2100655.jpg" alt="Airline">
+            <div class="overlay">
+                <h1>Welcome to Emirates Airline</h1>
+                <p>Have A Safe Journey</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Learn more about our airline and what we offer.</p>
+    </section>
+
+    <section id="booking">
+        <h2>Book Your Flight</h2>
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="departure">Departure Date:</label>
+            <input type="date" id="departure" name="departure" required>
+
+            <label for="return">Return Date:</label>
+            <input type="date" id="return" name="return">
+
+            <label for="destination">Destination:</label>
+            <select id="destination" name="destination" required>
+                <option value="new-york">New York</option>
+                <option value="london">London</option>
+                <option value="paris">Paris</option>
+                <option value="newzeland">Newzeland</option>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="dubai">Dubai</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <section id="payment">
+        <h2>Payment</h2>
+        <form>
+            <label for="card-name">Name on Card:</label>
+            <input type="text" id="card-name" name="card-name" required>
+
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required>
+
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="month" id="expiry-date" name="expiry-date" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+
+            <button type="submit">Pay Now</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <button id="toggleButton">Show Contact Information</button>
+        <div id="contactInfo">
+            <p>Email: contact@airline.com</p>
+            <p>Phone: 7016889464</p>
+            <p>Address: 4,time stamp office sindhu bhavan road Ahmedabad</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Airline Company. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            var contactInfo = document.getElementById('contactInfo');
+            if (contactInfo.style.display === 'none') {
+                contactInfo.style.display = 'block';
+                this.textContent = 'Hide Contact Information';
+            } else {
+                contactInfo.style.display = 'none';
+                this.textContent = 'Show Contact Information';
+            }
+        });
+    </script>
+</body>
+</html>
